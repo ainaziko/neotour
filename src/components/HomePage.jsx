@@ -15,7 +15,7 @@ const HomePage = () => {
                     <button className={styles.letsGoBtn}>Let's Go! &rarr; </button>
                 </div>
                 <div className={styles.homeImgContainer}>
-                    <img src={travellerImg}></img>
+                    <img src={travellerImg} alt="travellers img"></img>
                 </div>
             </section>
         </>
