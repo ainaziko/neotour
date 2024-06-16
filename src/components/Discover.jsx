@@ -30,8 +30,8 @@ const Discover = () => {
 
             <div className={styles.slideArrowsContainer}>
                 <div className={styles.slideArrows}>
-                    <button className={styles.sliderBtn} onClick={() => slider?.current?.slickPrev()}><img src={leftArrow}/> </button>
-                    <button className={styles.sliderBtn} onClick={() => slider?.current?.slickNext()}><img src={rightArrow} alt="" /></button>
+                    <button className={styles.sliderBtn} onClick={() => slider?.current?.slickPrev()}><img src={leftArrow} alt="prev btn"/> </button>
+                    <button className={styles.sliderBtn} onClick={() => slider?.current?.slickNext()}><img src={rightArrow} alt="next btn" /></button>
                 </div>
             </div>
             
