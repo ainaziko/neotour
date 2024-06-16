@@ -1,0 +1,35 @@
+.discover {
+    margin: 0 5rem;
+}
+
+.title {
+    margin-left: -15px;
+    margin-top: 1rem;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+.slick-prev:before, .slick-next:before {
+    color: #09529b !important;
+}
+
+.slideArrowsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.slideArrows {
+    display: flex;
+    justify-content: space-between;
+    width: 8rem;
+}
+
+.sliderBtn {
+    border: none;
+    box-shadow: none;
+    box-shadow: none;
+    background: none;
+}

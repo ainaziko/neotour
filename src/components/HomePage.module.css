@@ -1,0 +1,51 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: linear-gradient(to bottom, #D0CBFF, #D0CBFF00);
+    border: solid black;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.homeInfo{
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+.homeInfo h1{
+    font-size: 96px;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px #00000040;
+}
+
+.titleP1 + .titleP2 {
+    margin-top: -20px;
+}
+
+.homeInfo p {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px #00000040;
+}
+
+.homeImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letsGoBtn {
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px #00000040;
+    height: 50px; 
+    font-size: 24px;
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+
+.letsGoBtn:hover{
+    cursor: pointer;
+}
