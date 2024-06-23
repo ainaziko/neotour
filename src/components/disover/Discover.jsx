@@ -7,6 +7,7 @@ import rightArrow from '../../assets/rightArrow.svg'
 import leftArrow from '../../assets/leftArrow.svg'
 import DiscoverCard from "../../UI/DiscoverCard";
 import { discoverApi } from "../../api";
+import Categories from "../categories/Categories";
 
 const Discover = () => {
 
@@ -43,23 +44,13 @@ const Discover = () => {
         console.log(category)
     }, [category]);
 
-    const updateCategory = (newCategory) => {
-        setCategory(newCategory);
-        console.log(category)
-    };
 
     return (
         <div className={styles.discover}>
             <p className={styles.title}>Discover</p>
-            <div>
-                <button className={styles.categoryItem} onClick={() => updateCategory('popular')}>Popular</button>
-                <button className={styles.categoryItem} onClick={() => updateCategory('featured')}>Featured</button>
-                <button className={styles.categoryItem} onClick={() => updateCategory('most-svisited')}>Most Visited</button>
-                <button className={styles.categoryItem} onClick={() => updateCategory('europe')}>Europe</button>
-                <button className={styles.categoryItem} onClick={() => updateCategory('asia')}>Asia</button>
-            </div>
 
-
+            <Categories category={category} setCategory={setCategory} />
+            
             <div className={styles.slideArrowsContainer}>
                 <div className={styles.slideArrows}>
                     <button className={styles.sliderBtn} onClick={() => slider?.current?.slickPrev()}><img src={leftArrow} alt="prev btn" /></button>
