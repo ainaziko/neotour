@@ -34,7 +34,7 @@ const TourDetails = () => {
 
     return (
         <div className={styles.details}>
-            <img className={styles.detailsImg} src={tour.thumbnail}></img>
+            <img className={styles.detailsImg} src={tour.thumbnail} alt="tour photo"></img>
             <div className={styles.detailsInfo}>
                 <p className={styles.title}>{tour.name}</p>
                 <p className={styles.location}><span className={styles.vector}><img src={vector}></img></span>{tour.location}</p>
@@ -44,7 +44,7 @@ const TourDetails = () => {
                 {tour.reviews.map((review) => (
                     <>
                         <p className={styles.reviewerName}>{review.reviewer_name}</p>
-                        <img className={styles.reviewerImg} src={review.reviewer_photo}/>
+                        <img className={styles.reviewerImg} src={review.reviewer_photo} alt="tour detail location icon"/>
                         <p className={styles.reviewTxt}>{review.review_text}</p>
 
                     </>
