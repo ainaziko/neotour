@@ -1,5 +1,5 @@
 import React from "react";
-import travellerImg from '../assets/traveller.png'
+import travellerImg from '../../assets/traveller.png'
 import styles from './HomePage.module.css'
 
 const HomePage = () => {
