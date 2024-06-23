@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { mockDiscoverCardsData } from './mock';
 
 const instance = axios.create({
     baseURL: 'https://muha-backender.org.kg'
