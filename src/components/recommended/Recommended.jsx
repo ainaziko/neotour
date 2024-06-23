@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RecommendedCard from "../../UI/recommendCard/RecommendedCard";
 import styles from './Recommended.module.css'
+import { Link } from "react-router-dom"
 import { discoverApi } from "../../api";
 
 const Recommended = () => {
@@ -30,14 +31,16 @@ const Recommended = () => {
                     <p>Loading...</p>
                 ) : recommendations.length > 0 ? (
                     recommendations.map((tour) => (
-                        <RecommendedCard
-                            key={tour.id}
-                            card={{
-                                id: tour.id,
-                                img: tour.thumbnail,
-                                title: tour.name
-                            }}
-                        />
+                        <Link key={tour.id} to={`/tours/${tour.id}`}>
+                            <RecommendedCard
+                                key={tour.id}
+                                card={{
+                                    id: tour.id,
+                                    img: tour.thumbnail,
+                                    title: tour.name
+                                }}
+                            />
+                        </Link> 
                     ))
                 ) : (
                     <p>No recommended tours available</p>

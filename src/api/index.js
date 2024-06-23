@@ -23,11 +23,21 @@ export const discoverApi = {
     async getRecommendedTours() {
         try {
             const response = await instance.get(`/list-tours`);
-            console.log("from ")
-            console.log(response)
             return response;
         } catch (error) {
             return {status: 500, data: [] };
         }
     }
 };
+
+export const tourDetailsApi = {
+    async getTourDetailsById(id) {
+        try {
+            const response = await instance.get(`/retrieve-tour/${id}`)
+            console.log("details: ", response)
+            return response;
+        } catch {
+            return { status: 500, data: null };
+        }
+    }
+}

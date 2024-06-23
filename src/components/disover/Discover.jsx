@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import styles from './Discover.module.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -62,14 +63,16 @@ const Discover = () => {
                 tours.length > 0 ? (
                     <Slider ref={slider} {...settings}>
                         {tours.map((card, index) => (
-                            <DiscoverCard
-                                key={index}
-                                card={{
-                                    id: card.id,
-                                    img: card.thumbnail,
-                                    title: card.name
-                                }}
-                            />
+                            <Link key={card.id} to={`/tours/${card.id}`}>
+                                <DiscoverCard
+                                    key={index}
+                                    card={{
+                                        id: card.id,
+                                        img: card.thumbnail,
+                                        title: card.name
+                                    }}
+                                />
+                            </Link>
                         ))}
                     </Slider>
                 ) : (
