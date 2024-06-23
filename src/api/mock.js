@@ -1,4 +1,53 @@
 import image from './mocks/mountains.jpeg'
+import recImage from './mocks/assets/recImg.jpeg'
+
+export const mockRecommendedToursData = [
+    {
+        id: 1,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 2,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 3,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 4,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 5,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 6,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 7,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 8,
+        img: recImage,
+        title: "Northern Mountain 1"
+    },
+    {
+        id: 9,
+        img: recImage,
+        title: "Northern Mountain 1"
+    }
+]
 
 export const mockDiscoverCardsData = [
     {

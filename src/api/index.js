@@ -18,5 +18,16 @@ export const discoverApi = {
         } catch (error) {
             return { status: 500, data: [] };
         }
+    },
+
+    async getRecommendedTours() {
+        try {
+            const response = await instance.get(`/list-tours`);
+            console.log("from ")
+            console.log(response)
+            return response;
+        } catch (error) {
+            return {status: 500, data: [] };
+        }
     }
 };

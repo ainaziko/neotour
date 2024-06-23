@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import rightArrow from '../../assets/rightArrow.svg'
 import leftArrow from '../../assets/leftArrow.svg'
-import DiscoverCard from "../../UI/DiscoverCard";
+import DiscoverCard from "../../UI/discoverCard/DiscoverCard";
 import { discoverApi } from "../../api";
 import Categories from "../categories/Categories";
 
@@ -29,8 +29,6 @@ const Discover = () => {
     const fetchData = async (category) => {
         try {
             const data = await discoverApi.getTourListByCategoryName(category);
-            console.log('here')
-            console.log(data)
             setTours(Array.isArray(data.data) ? data.data : []);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -41,7 +39,6 @@ const Discover = () => {
 
     useEffect(() => {
         fetchData(category || 'popular');
-        console.log(category)
     }, [category]);
 
 
