@@ -1,0 +1,73 @@
+.details{
+    width: 100%;
+}
+
+.detailsImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.detailsInfo{
+    width: 100%;
+    height: 500px;
+    padding: 2rem 5rem 0 5rem;
+    background-color: white;
+    border-radius: 48px 48px 0 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.title{
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.location {
+    margin: 1rem 0 2rem 0;
+    font-size: 16px;
+}
+
+.vector {
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+
+.descriptionTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reviewsTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.description {
+    margin-bottom: 2rem;
+}
+
+.btnContainer{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.bookBtn{
+    margin-right: 12rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: #6A62B7;
+    color: white;
+    font-size: 20px;
+}

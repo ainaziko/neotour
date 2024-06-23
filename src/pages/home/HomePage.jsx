@@ -1,6 +1,7 @@
 import React from "react";
-import travellerImg from '../assets/traveller.png'
+import travellerImg from '../../assets/traveller.png'
 import styles from './HomePage.module.css'
+import Tours from "../tours/Tours";
 
 const HomePage = () => {
     return (
@@ -18,6 +19,7 @@ const HomePage = () => {
                     <img src={travellerImg} alt="travellers img"></img>
                 </div>
             </section>
+            <Tours/>
         </>
         
     )

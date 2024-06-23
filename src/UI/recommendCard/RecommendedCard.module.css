@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    width: 282px;
+    height: 282px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.cardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
+}
