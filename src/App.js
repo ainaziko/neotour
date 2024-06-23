@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, Link} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/home/HomePage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
