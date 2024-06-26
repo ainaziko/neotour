@@ -6,6 +6,7 @@ import styles from './TourDetails.module.css';
 import vector from '../../assets/Vector.svg';
 import goBackArrow from '../../assets/goBackArrow.svg'
 import Review from "../review/Review";
+import Modal from 'react-modal';
 
 const TourDetails = () => {
     const navigate = useNavigate();
@@ -13,7 +14,6 @@ const TourDetails = () => {
     const [tour, setTour] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isFormVisible, setIsFormVisible] = useState(false);
-
 
     const handleBookNowClick = () => {
         setIsFormVisible(true);
@@ -58,31 +58,34 @@ const TourDetails = () => {
                     </p>
                     <p className={styles.subTitle}>Description</p>
                     <p className={styles.description}>{tour.description}</p>
-                    {tour.reviews === null || tour.reviews.size === 0}
                     {(!tour.reviews || tour.reviews.length === 0) ? (
                         <p className={styles.comment}>No reviews yet</p>
-                            ) : (
-                                <>
-                                    <p className={styles.subTitle}>Reviews</p>
-                                    {tour.reviews.map((review, index) => (
-                                        <div key={index}>
-                                            <Review name={review.reviewer_name} photo={review.reviewer_photo} review={review.review_text}/>
-                                        </div>
-                                    ))}
-                                </>
-                            )}
-                </div>
-                <div className={styles.btnContainer}>
-                
-                {isFormVisible ? (
-                    <BookingForm isFormVisible={isFormVisible} setIsFormVisible={setIsFormVisible} onClose={() => setIsFormVisible(false)} />
                     ) : (
-                        <button className={styles.bookBtn} onClick={handleBookNowClick}>
-                            Book now
-                        </button>
+                        <>
+                            <p className={styles.subTitle}>Reviews</p>
+                            {tour.reviews.map((review, index) => (
+                                <div key={index}>
+                                    <Review name={review.reviewer_name} photo={review.reviewer_photo} review={review.review_text} />
+                                </div>
+                            ))}
+                        </>
                     )}
                 </div>
+                <div className={styles.btnContainer}>
+                    <button className={styles.bookBtn} onClick={handleBookNowClick}>
+                        Book now
+                    </button>
+                </div>
             </div>
+            <Modal
+                isOpen={isFormVisible}
+                onRequestClose={() => setIsFormVisible(false)}
+                contentLabel="Booking Form"
+                className={styles.modal}
+                overlayClassName={styles.overlay}
+            >
+                <BookingForm setIsFormVisible={setIsFormVisible} tourId={id}/>
+            </Modal>
         </div>
     );
 };

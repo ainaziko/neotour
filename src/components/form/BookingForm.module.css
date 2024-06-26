@@ -1,11 +1,11 @@
-form {
-    border: solid black;
+.form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem 2rem 2rem 2rem;
     max-width: 614px;
     border-radius: 48px;
+    background-color: white;
 }
 
 .headings {
@@ -62,7 +62,6 @@ form {
 
 .counterBtnContainer {
     position: relative;
-    
 }
 
 .decrementBtn, .incrementBtn {
