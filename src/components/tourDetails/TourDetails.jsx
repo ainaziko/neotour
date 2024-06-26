@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { tourDetailsApi } from "../../api";
+import BookingForm from "../form/BookingForm";
 import styles from './TourDetails.module.css';
 import vector from '../../assets/Vector.svg';
 import goBackArrow from '../../assets/goBackArrow.svg'
@@ -11,6 +12,12 @@ const TourDetails = () => {
     const { id } = useParams();
     const [tour, setTour] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isFormVisible, setIsFormVisible] = useState(false);
+
+
+    const handleBookNowClick = () => {
+        setIsFormVisible(true);
+    }
 
     const fetchData = useCallback(async () => {
         try {
@@ -66,7 +73,14 @@ const TourDetails = () => {
                             )}
                 </div>
                 <div className={styles.btnContainer}>
-                    <button className={styles.bookBtn}>Book now</button>
+                
+                {isFormVisible ? (
+                    <BookingForm isFormVisible={isFormVisible} setIsFormVisible={setIsFormVisible} onClose={() => setIsFormVisible(false)} />
+                    ) : (
+                        <button className={styles.bookBtn} onClick={handleBookNowClick}>
+                            Book now
+                        </button>
+                    )}
                 </div>
             </div>
         </div>
