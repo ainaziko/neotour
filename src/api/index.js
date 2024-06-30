@@ -38,5 +38,20 @@ export const tourDetailsApi = {
         } catch {
             return { status: 500, data: null };
         }
+    },
+
+    async bookTour(fullData) {
+        try {
+            const response = await instance.post('/create-booking/', fullData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            console.log('Booking response:', response.data);
+            return { success: true, data: response.data };
+        } catch (error) {
+            console.error('Error booking tour:', error);
+            return { success: false, error: error.message };
+        }
     }
 }

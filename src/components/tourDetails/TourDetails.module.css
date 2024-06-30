@@ -1,26 +1,17 @@
-.details{
+.details {
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
-.detailsImg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
+.detailsInfo {
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 2;
 }
 
-.detailsInfo{
-    width: 100%;
-    height: 500px;
-    padding: 2rem 5rem 0 5rem;
-    background-color: white;
-    border-radius: 48px 48px 0 0;
-    position: fixed;
-    bottom: 0;
-}
-
-.title{
+.title {
+    margin-left: -0.3rem;
     font-size: 64px;
     font-weight: 900;
 }
@@ -31,43 +22,90 @@
 }
 
 .vector {
-    position: relative;
     top: 4px;
     margin-right: 5px;
 }
 
-.descriptionTitle {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.reviewsTitle {
+.subTitle {
     font-size: 24px;
     font-weight: 700;
 }
 
 .description {
-    margin-bottom: 2rem;
+    margin: 0.5rem 0 2rem 0;
 }
 
-.btnContainer{
-    
-    width: 100%;
+.btnContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
 }
 
-.bookBtn{
-    margin-right: 12rem;
-    margin-bottom: 1rem;
-    width: 80%;
-    height: 60px;
-    border-radius: 50px;
+.bookBtn {
     border: none;
     background-color: #6A62B7;
-    color: white;
-    font-size: 20px;
+    color: #FFFFFF;
+    height: 64px;
+    width: 83%;
+    border-radius: 50px;
+    font-size: 24px;
+    margin: 2rem 0;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    z-index: 2;
+}
+
+.detailsImg {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.comment {
+    color: grey;
+}
+
+.goBackBtn {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.goBackArrow {
+    margin-right: 0.5rem;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
 }
